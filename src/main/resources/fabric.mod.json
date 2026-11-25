@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zxcsoftina_visuals",
+  "version": "${version}",
+  "name": "ZXCSOFTINA VISUALS",
+  "description": "A dark neon client-side visuals and quality-of-life starter for Fabric.",
+  "authors": ["ZXCSOFTINA"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "dev.zxcsoftina.visuals.ZxcsoftinaClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.18.4",
+    "minecraft": "1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
