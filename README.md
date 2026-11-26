@@ -1,23 +1,28 @@
 # ZXCSOFTINA VISUALS
 
-A Fabric client-side Minecraft mod starter for Minecraft 1.21.11.
+A custom Dark Neon client-side Fabric mod starter for Minecraft **1.21.11**.
 
-## Status
+## Current starter features
+- Custom ClickGUI screen (toggle with Right Shift)
+- Module registry with categories and keybind-ready module state
+- Dark neon visual theme
+- Fullbright client gamma toggle
+- HUD Info, Coordinates, Custom Crosshair and Clean Screenshots are placeholders, not implemented yet
 
-This repository currently contains the initial project scaffold. It is not a finished client or a verified build yet.
-
-## Planned features
-
-- Dark neon ClickGUI
-- Client-side visual modules
-- HUD information and coordinates
-- Custom crosshair
-- Quality-of-life utilities
+## Requirements
+- Minecraft Java Edition 1.21.11
+- Java 21
+- Fabric Loader and Fabric API matching gradle.properties
 
 ## Build
+Run `gradle build` (or `./gradlew build` if you generate a Gradle wrapper). The mod jar will be in `build/libs/`.
 
-Requires Java 21 and Gradle. Run `./gradlew build` after adding the Gradle wrapper, or use an installed Gradle distribution with `gradle build`.
+## Install
+Copy the built jar into the `mods` folder of a Fabric 1.21.11 profile together with Fabric API.
+
+## Controls
+- Right Shift: open/close ClickGUI
+- Click a module row: toggle it
 
 ## License
-
-MIT
+MIT for the original project source. Minecraft and Fabric are trademarks/projects of their respective owners; this project is not affiliated with Mojang or Microsoft.

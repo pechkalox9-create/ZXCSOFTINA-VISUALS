@@ -5,13 +5,7 @@ public enum ModuleCategory {
     HUD("HUD"),
     UTILITY("Utility");
 
-    private final String displayName;
-
-    ModuleCategory(String displayName) {
-        this.displayName = displayName;
-    }
-
-    public String displayName() {
-        return displayName;
-    }
+    private final String title;
+    ModuleCategory(String title) { this.title = title; }
+    public String title() { return title; }
 }

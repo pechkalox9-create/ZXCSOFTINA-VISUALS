@@ -1,5 +1,7 @@
 package dev.zxcsoftina.visuals.module;
 
+import net.minecraft.client.Minecraft;
+
 public abstract class ClientModule {
     private final String name;
     private final String description;
@@ -12,22 +14,22 @@ public abstract class ClientModule {
         this.category = category;
     }
 
-    public final String name() { return name; }
-    public final String description() { return description; }
-    public final ModuleCategory category() { return category; }
-    public final boolean isEnabled() { return enabled; }
-
-    public final void setEnabled(boolean enabled) {
-        if (this.enabled == enabled) return;
-        this.enabled = enabled;
-        if (enabled) onEnable();
-        else onDisable();
+    public final void toggle(Minecraft client) {
+        setEnabled(!enabled, client);
     }
 
-    public final void toggle() {
-        setEnabled(!enabled);
+    public final void setEnabled(boolean value, Minecraft client) {
+        if (enabled == value) return;
+        enabled = value;
+        if (value) onEnable(client); else onDisable(client);
     }
 
-    protected void onEnable() { }
-    protected void onDisable() { }
+    public void tick(Minecraft client) {}
+    protected void onEnable(Minecraft client) {}
+    protected void onDisable(Minecraft client) {}
+
+    public String name() { return name; }
+    public String description() { return description; }
+    public ModuleCategory category() { return category; }
+    public boolean enabled() { return enabled; }
 }
